@@ -12,7 +12,8 @@ Many novice investors start their personal investment journey by opening a broke
 
 ### Overview
 Trade bros is a website that displays and tracks various US stocks. The website features an interactive UI that allows users to view and search for publicly traded stocks, indices, and tech sectors. It also includes a full guide on how to trade stocks and options as well as features a watchlist where users can enter stocks that they are interested in. Furthermore, it will allow users to create an account and log in so they can build a virtual portfolio so they can keep track of their holdings whenever they want.
-[CS180 Project and Lab Guidelines.pdf](https://github.com/mallie2000/CS180-Project/files/10504728/CS180.Project.and.Lab.Guidelines.pdf)
+
+![CS180 Project and Lab Guidelines.pdf](https://github.com/mallie2000/CS180-Project/files/10504728/CS180.Project.and.Lab.Guidelines.pdf)
 
 ### Languages, tools & technologies
 * [JavaScript](https://www.javascript.com/)
