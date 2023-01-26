@@ -14,10 +14,30 @@ Many novice investors start their personal investment journey by opening a broke
 Trade bros is a website that displays and tracks various US stocks. The website features an interactive UI that allows users to view and search for publicly traded stocks, indices, and tech sectors. It also includes a full guide on how to trade stocks and options as well as features a watchlist where users can enter stocks that they are interested in. Furthermore, it will allow users to create an account and log in so they can build a virtual portfolio so they can keep track of their holdings whenever they want.
 
 ### Languages, tools & technologies
-[JavaScript](https://www.javascript.com/)
-[Firebase](https://firebase.google.com/?gclid=Cj0KCQiAw8OeBhCeARIsAGxWtUwsz6T-Ex2zMXnosvfWhqaPRL6Ssdjo3GQJOSS5_xFW37-bwRiQqUMaAgqAEALw_wcB&gclsrc=aw.ds)
-[Material-UI](https://mui.com/)
-[Finhub.IO](https://finnhub.io/docs/api)
+* [JavaScript](https://www.javascript.com/)
+* [Firebase](https://firebase.google.com/?gclid=Cj0KCQiAw8OeBhCeARIsAGxWtUwsz6T-Ex2zMXnosvfWhqaPRL6Ssdjo3GQJOSS5_xFW37-bwRiQqUMaAgqAEALw_wcB&gclsrc=aw.ds)
+* [Material-UI](https://mui.com/)
+* [Finhub.IO](https://finnhub.io/docs/api)
+
+### Features
+* Search for stocks tickers
+* Display statistics of selected stocks
+* Displays performance of various indices
+* Displays top 50 stocks based on sector 
+* Individual Stock News
+* Sector Stock News
+* Creation of a custom watchlist containing user-selected stocks
+* Display the performance of stocks in the custom watchlist 
+* Graphical representation of custom watchlist 
+* Creation of a virtual portfolio
+* The virtual portfolio contains stocks that are “purchased”
+* The virtual portfolio breaks down the performance of their selected stocks
+* Text notifications
+
+## Diagrams
+### Use Case Diagram
+### Activity Diagram
+
 
 
 
