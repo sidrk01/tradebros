@@ -39,6 +39,10 @@ Trade bros is a website that displays and tracks various US stocks. The website 
 ## Diagrams
 ### Use Case Diagram
 ### Activity Diagram
+#Dependecies
+Install npn and npx depending on your OS 
+npm react-router-dom
+
 
 
 
