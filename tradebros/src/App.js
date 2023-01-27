@@ -1,6 +1,9 @@
+
 import './App.css';
 import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import React, { Component }  from 'react';
+import Learn from './Pages/Learn';
 
 function App() {
   return (
@@ -10,7 +13,6 @@ function App() {
       <Route path="/" exact />
     </Routes>
   </Router>
-  );
+);
 }
-
 export default App;
