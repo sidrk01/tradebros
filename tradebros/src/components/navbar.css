@@ -10,6 +10,7 @@ body {
 }
 
 header {
+  background: #000;
   position: fixed;
   width: 100%;
   top: 0;
@@ -52,7 +53,7 @@ header {
 }
 
 .navbar .navbar-links:hover {
-  background: #C32865;
+  color: #C32865;
 }
 
 #menu-icon {
@@ -71,6 +72,10 @@ header {
   text-decoration: none;
 }
 
+.header-btn .sign-up:hover {
+  color: #C32865;
+}
+
 .header-btn .login  {
   background: #C32865;
   border: 2px solid transparent;
@@ -81,6 +86,15 @@ header {
   border: 2px solid #C32865;
   background: transparent;
 }
+.navbar-links:hover > .dropdown-button {
+  transform: rotate(180deg);
+  transition: 0.2s all;
+  color: #C32865;
+}
+.dropdown-button {
+  display: inline-block;
+  position: absolute;
+}
 
 @media (max-width:1530px) {
   header {
@@ -88,7 +102,6 @@ header {
     transition: .2s;
   }
 }
-
 @media screen and (max-width: 960px) {
   .navbar {
     position: absolute;
@@ -103,21 +116,23 @@ header {
     color: #FFF;
     font-size: 2rem;
   }
-
   .menu-icon {
     display: block;
     color: #FFF;
-}
-
-.sign-up {
-  display: none;
-}
-
-.navbar .navbar-links {
-  display: block;
-  padding: 1rem;
-  margin: 0.8rem;
-}
-
+  }
+  .sign-up {
+    display: none;
+  }
+  .navbar .navbar-links, .navbar-links-special {
+    display: block;
+    padding: 1rem;
+    margin: 0.8rem;
+  }
+  .navbar-links-special:hover {
+    color: #C32865;
+  }
+  .dropdown-button {
+    display: none !important;
+  }
 }
 
