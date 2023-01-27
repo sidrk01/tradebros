@@ -11,6 +11,8 @@ function App() {
     <Navbar />
     <Routes>
       <Route path="/" exact />
+      <Route path="/learn" exact element={<Learn/>}/>
+      <Route path="/pricing" exact/>
     </Routes>
   </Router>
 );
