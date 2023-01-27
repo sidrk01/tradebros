@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Button from "./Button";
 import './navbar.css'
 
 export default function Navbar() {
