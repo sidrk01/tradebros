@@ -3,7 +3,6 @@ import './Learn.css'
 export default function Learn() {
     return (
        <div className='container'>
-        {/* <h3> I LIKE BIG BUTTS </h3> */}
         <div className='box'>
             <h3 className='top1'> what is an</h3>
             <h3> investment?</h3>
