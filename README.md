@@ -20,6 +20,7 @@ Trade bros is a website that displays and tracks various US stocks. The website 
 * [Firebase](https://firebase.google.com/?gclid=Cj0KCQiAw8OeBhCeARIsAGxWtUwsz6T-Ex2zMXnosvfWhqaPRL6Ssdjo3GQJOSS5_xFW37-bwRiQqUMaAgqAEALw_wcB&gclsrc=aw.ds)
 * [Material-UI](https://mui.com/)
 * [Finhub.IO](https://finnhub.io/docs/api)
+* [Command not found issue](https://stackoverflow.com/questions/47612580/react-scripts-command-not-found)
 
 ### Features
 * Search for stocks tickers
