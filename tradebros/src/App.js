@@ -10,6 +10,7 @@ import StockPerformance from './Pages/StockPerformance';
 function App() {
   return (
     <Router>
+      <Navbar/>
     <Routes>
       <Route path="/"/>
       <Route path="/learn" element={<Learn/>}/>
