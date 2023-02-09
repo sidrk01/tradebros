@@ -4,34 +4,34 @@ import { useState } from 'react'
 export default function Learn() {
     const [cards] = useState([
         {
-            Title: 'card-1',
+            Title: 'ETF Basics',
             img: 'ETF.jpeg',
-            Text: 'Lorem ipsum dolor sit amet. Et similique animi sit eius sint et adipisci saepe cum unde sapiente ut minima totam. Ea quos tenetur et harum cupiditate eum dolore quia aut quis delectus 33 aliquid rerum ut tempora recusandae. Sed animi quisquam sed perferendis autem id voluptatem dignissimos aut quia aspernatur. Est omnis reprehenderit aut exercitationem beatae eum harum porro sed saepe perspiciatis.s'
+            Text: 'What is an ETF and how do you choose one? Find the answer here.'
         },
         {
-            Title: 'card-2',
+            Title: 'Trading ETFs',
             img: 'ETF.jpeg',
-            Text: 'Lorem ipsum dolor sit amet. Et similique animi sit eius sint et adipisci saepe cum unde sapiente ut minima totam. Ea quos tenetur et harum cupiditate eum dolore quia aut quis delectus 33 aliquid rerum ut tempora recusandae. Sed animi quisquam sed perferendis autem id voluptatem dignissimos aut quia aspernatur. Est omnis reprehenderit aut exercitationem beatae eum harum porro sed saepe perspiciatis.'
+            Text: 'How does leverage work in ETFs? Click here to find the answer.'
         },
         {
-            Title: 'card-3',
+            Title: 'Recurring Investment',
             img: 'ETF.jpeg',
-            Text: 'Lorem ipsum dolor sit amet. Et similique animi sit eius sint et adipisci saepe cum unde sapiente ut minima totam. Ea quos tenetur et harum cupiditate eum dolore quia aut quis delectus 33 aliquid rerum ut tempora recusandae. Sed animi quisquam sed perferendis autem id voluptatem dignissimos aut quia aspernatur. Est omnis reprehenderit aut exercitationem beatae eum harum porro sed saepe perspiciatis.'
+            Text: 'Recurring investment is a tool for investors to make regular and automatic investments in stocks and ETFs.'
         },
         {
-            Title: 'card-4',
+            Title: 'New Feature Updates',
             img: 'ETF.jpeg',
-            Text: 'Lorem ipsum dolor sit amet. Et similique animi sit eius sint et adipisci saepe cum unde sapiente ut minima totam. Ea quos tenetur et harum cupiditate eum dolore quia aut quis delectus 33 aliquid rerum ut tempora recusandae. Sed animi quisquam sed perferendis autem id voluptatem dignissimos aut quia aspernatur. Est omnis reprehenderit aut exercitationem beatae eum harum porro sed saepe perspiciatis.'
+            Text: 'Check the details of new feature updates here.'
         },
         {
-            Title: 'card-5',
+            Title: 'Portfolio',
             img: 'ETF.jpeg',
-            Text: 'tLorem ipsum dolor sit amet. Et similique animi sit eius sint et adipisci saepe cum unde sapiente ut minima totam. Ea quos tenetur et harum cupiditate eum dolore quia aut quis delectus 33 aliquid rerum ut tempora recusandae. Sed animi quisquam sed perferendis autem id voluptatem dignissimos aut quia aspernatur. Est omnis reprehenderit aut exercitationem beatae eum harum porro sed saepe perspiciatis.'
+            Text: 'What is in a portfolio? How do you evaluate its performance? Find the answer here.'
         },
         {
-            Title: 'card-6',
+            Title: 'Option Basics',
             img: 'ETF.jpeg',
-            Text: 'Lorem ipsum dolor sit amet. Et similique animi sit eius sint et adipisci saepe cum unde sapiente ut minima totam. Ea quos tenetur et harum cupiditate eum dolore quia aut quis delectus 33 aliquid rerum ut tempora recusandae. Sed animi quisquam sed perferendis autem id voluptatem dignissimos aut quia aspernatur. Est omnis reprehenderit aut exercitationem beatae eum harum porro sed saepe perspiciatis.'
+            Text: 'CBOE tells you what is options and the very basics.'
         },
     ])
     return (
