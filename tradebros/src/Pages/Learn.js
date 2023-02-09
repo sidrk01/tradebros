@@ -37,9 +37,6 @@ export default function Learn() {
     return (
         
         <div>
-            <header> 
-                
-            </header>
        <div className='container'>
         <div className='box'>
             <h3 className='top1'> what is an</h3>
