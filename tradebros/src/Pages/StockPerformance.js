@@ -57,8 +57,8 @@ export default function StockPerformance() {
     <Fragment>
       <div className="market-container">
         <div className="searchbar-container">
-            <input className="user-input" ref={inputRef} type="text" id="message" name="message"></input>
-            <button className="custom-button" onClick={handleClick}>Update</button>
+            <input className="search" ref={inputRef} type="text" id="message" name="message"></input>
+            <button className="search-btn" onClick={handleClick}>Search</button>
         </div>
         <div className="heading-container">
           <ul>
@@ -74,7 +74,7 @@ export default function StockPerformance() {
         <Fragment>
           <div className="element-container">
             <ul>
-              {stocksData.map((stock) => {
+              {tempStocksData.map((stock) => {
                 return (
                   <ul className="element-list">
                     <li className="list-elements">{stock.name}</li>
