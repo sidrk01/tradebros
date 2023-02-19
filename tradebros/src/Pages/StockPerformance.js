@@ -57,7 +57,7 @@ export default function StockPerformance() {
     <Fragment>
       <div className="market-container">
         <div className="searchbar-container">
-            <input className="search" ref={inputRef} type="text" id="message" name="message"></input>
+            <input className="search" ref={inputRef} type="text" id="message" name="message" placeholder="Search a ticker"></input>
             <button className="search-btn" onClick={handleClick}>Search</button>
         </div>
         <div className="heading-container">
