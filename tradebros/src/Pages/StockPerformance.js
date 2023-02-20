@@ -22,15 +22,21 @@ export default function StockPerformance() {
   const [updated, setUpdated] = useState(message);
 
   const getStocksData = (stock) => {
-    return axios.get(`${BASE_URL}${stock}${KEY_URL}`).catch((error) => {
-      console.error("Error", error.message);
-    });
+    let returnVal = axios.get(`${BASE_URL}${stock}${KEY_URL}`);
+    console.log(returnVal)
+    return returnVal
   };
 
   const handleClick = () => {
     //make temp list
-    tempStocksData = []
-    stocksList.push(inputRef.current.value);
+    console.log("Entered Clicker")
+    tempStocksData = [];
+    let stockName = inputRef.current.value
+    stocksList.push((stockName).toUpperCase());
+    if(stocksList.length >= 2){
+      stocksList.splice(0,1);
+    }
+    console.log(stocksList)
     let promises = [];
     stocksList.forEach((stock) => {
       promises.push(
@@ -44,14 +50,10 @@ export default function StockPerformance() {
     });
 
     Promise.all(promises).then(() => {
+      tempStocksData = tempStocksData.filter((stock) => stock.dp !=null)
       setStocksData(tempStocksData);
-      console.log(tempStocksData);
     });
   };
-
-//   const handleSearch = () => {
-//     myStocks.filter((stock) => stock.name.toLowerCase().includes(search));
-//   };
 
   return (
     <Fragment>
@@ -77,36 +79,36 @@ export default function StockPerformance() {
               {tempStocksData.map((stock) => {
                 return (
                   <ul className="element-list">
-                    <li className="list-elements">{stock.name}</li>
-                    <li className="list-elements">{stock.c.toFixed(2)}</li>
-                    <li className="list-elements">{stock.h.toFixed(2)}</li>
-                    <li className="list-elements">{stock.l.toFixed(2)}</li>
+                    <li className="list-elements">{stock?.name}</li>
+                    <li className="list-elements">{stock?.c.toFixed(2)}</li>
+                    <li className="list-elements">{stock?.h.toFixed(2)}</li>
+                    <li className="list-elements">{stock?.l.toFixed(2)}</li>
 
-                    {stock.d.toFixed(2) < 0 ? (
+                    {stock?.d.toFixed(2) < 0 ? (
                       <Fragment>
                         <li className="list-elements-red">
-                          {stock.d.toFixed(2)}
+                          {stock?.d.toFixed(2)}
                         </li>
                       </Fragment>
                     ) : (
                       <Fragment>
                         <li className="list-elements-green">
-                          {stock.d.toFixed(2)}
+                          {stock?.d.toFixed(2)}
                         </li>
                       </Fragment>
                     )}
 
-                    {stock.dp.toFixed(2) < 0 ? (
+                    {stock?.dp.toFixed(2) < 0 ? (
                       <Fragment>
                         <li className="list-elements-red">
-                          {stock.dp.toFixed(2)}%
+                          {stock?.dp.toFixed(2)}%
                           <ArrowDownwardIcon className="red-icon"></ArrowDownwardIcon>
                         </li>
                       </Fragment>
                     ) : (
                       <Fragment>
                         <li className="list-elements-green">
-                          {stock.dp.toFixed(2)}%{" "}
+                          {stock?.dp.toFixed(2)}%{" "}
                           <ArrowUpwardIcon className="green-icon"></ArrowUpwardIcon>
                         </li>
                       </Fragment>
