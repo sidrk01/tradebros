@@ -8,6 +8,7 @@ import Market from './Pages/Market';
 import StockPerformance from './Pages/StockPerformance';
 import Support from './Pages/Support';
 import Login from './Pages/Login';
+import Watchlists from './Pages/Watchlists';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Route path="/market" element={<Market/>}/>
       <Route path="/pricing" exact/>
       <Route path="/login" element={<Login/>}/>
+      <Route path="/watchlists" element={<Watchlists/>}/>
     </Routes>
   </Router>
 );

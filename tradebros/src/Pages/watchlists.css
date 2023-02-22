@@ -1,0 +1,10 @@
+.remove-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    justify-content: center;
+    background-color: #C32865;
+    align-items: center;
+    transition: 04.s;
+    color: white;
+}
