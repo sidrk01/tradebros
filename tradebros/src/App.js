@@ -1,29 +1,51 @@
 
 import './App.css';
 import Navbar from './components/Navbar';
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import React, { Component }  from 'react';
+import { BrowserRouter as Router, Routes, Route, Link, Navigate } from "react-router-dom";
+import React, { Component, useEffect, useState }  from 'react';
 import Learn from './Pages/Learn';
 import Market from './Pages/Market';
 import StockPerformance from './Pages/StockPerformance';
 import Support from './Pages/Support';
 import Login from './Pages/Login';
 import Watchlists from './Pages/Watchlists';
+import SignUp from './Pages/SignUp';
+import { AuthorizationProvider } from './AuthorizationContext';
+import { onAuthStateChanged } from 'firebase/auth';
+import { auth } from './Firebase';
+import VerifyEmail from './VerifyEmail';
 
 function App() {
+  const [timeActive, setTimeActive] = useState(false)
+  const [currentUser, setCurrentUser] = useState(null)
+
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      setCurrentUser(user)
+    })
+  }, [])
+  
   return (
     <Router>
       <Navbar/>
-    <Routes>
-      <Route path="/"/>
-      <Route path="/learn" element={<Learn/>}/>
-      <Route path="/support" element={<Support/>}/>
-      <Route path="/stock_performance" element={<StockPerformance/>}/>
-      <Route path="/market" element={<Market/>}/>
-      <Route path="/pricing" exact/>
-      <Route path="/login" element={<Login/>}/>
-      <Route path="/watchlists" element={<Watchlists/>}/>
-    </Routes>
+      <AuthorizationProvider value={{currentUser, timeActive, setTimeActive}}>
+        <Routes>
+          <Route path="/"/>
+          <Route path="/learn" element={<Learn/>}/>
+          <Route path="/support" element={<Support/>}/>
+          <Route path="/stock_performance" element={<StockPerformance/>}/>
+          <Route path="/market" element={<Market/>}/>
+          <Route path="/pricing" exact/>
+          <Route path="/login" element={<Login/>}/>
+          <Route path="/sign-up" element={
+            !currentUser?.emailVerified
+            ? <SignUp/>
+            : <Navigate to ='/'  replace/>
+          }/>
+          <Route path="/watchlists" element={<Watchlists/>}/>
+          <Route path='/verify-email' element={<VerifyEmail/>}/>
+        </Routes>
+      </AuthorizationProvider>
   </Router>
 );
 }
