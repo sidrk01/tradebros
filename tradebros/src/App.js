@@ -14,6 +14,8 @@ import { AuthorizationProvider } from './AuthorizationContext';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from './Firebase';
 import VerifyEmail from './VerifyEmail';
+import PrivateRoute from './Pages/PrivateRoute';
+import SignOut from './Pages/SignOut';
 
 function App() {
   const [timeActive, setTimeActive] = useState(false)
@@ -30,18 +32,31 @@ function App() {
       <Navbar/>
       <AuthorizationProvider value={{currentUser, timeActive, setTimeActive}}>
         <Routes>
-          <Route path="/"/>
+          <Route path="/" element={
+            <PrivateRoute>
+              <SignOut></SignOut>
+            </PrivateRoute>
+          }/>
           <Route path="/learn" element={<Learn/>}/>
           <Route path="/support" element={<Support/>}/>
           <Route path="/stock_performance" element={<StockPerformance/>}/>
           <Route path="/market" element={<Market/>}/>
           <Route path="/pricing" exact/>
-          <Route path="/login" element={<Login/>}/>
+
+          <Route path="/login" element={
+            !currentUser?.emailVerified
+            ? <Login/>
+            : <Navigate to='/' replace/>
+          }/>
+
           <Route path="/sign-up" element={
             !currentUser?.emailVerified
             ? <SignUp/>
             : <Navigate to ='/'  replace/>
           }/>
+
+
+
           <Route path="/watchlists" element={<Watchlists/>}/>
           <Route path='/verify-email' element={<VerifyEmail/>}/>
         </Routes>

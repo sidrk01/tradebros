@@ -84,6 +84,9 @@ export default function Navbar() {
             <Link to="/login" className="login">
                 Login
             </Link>
+            <Link to="/sign-out" className="sign-out">
+                Sign Out
+            </Link>
         </div>
     </header>
   );

@@ -5,9 +5,6 @@
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-/* body {
-  background: #000;
-} */
 
 header {
   background: #000;
@@ -64,12 +61,24 @@ header {
   display: none;
 }
 
-.header-btn .sign-up, .login {
-  padding: 10px 20px;
+.header-btn .sign-up, .login  {
+  padding: 10px 10px;
   color: #FFF;
   font-size: 15px;
   font-weight: 600;
   text-decoration: none;
+}
+
+.header-btn .sign-out {
+  padding: 10px 10px;
+  color: #FFF;
+  font-size: 15px;
+  font-weight: 600px;
+  text-decoration: none;
+}
+
+.header-btn .sign-out:hover {
+  color: #C32865;
 }
 
 .header-btn .sign-up:hover {
