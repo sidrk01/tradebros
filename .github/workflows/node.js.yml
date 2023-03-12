@@ -29,4 +29,5 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
         cache-dependency-path: tradebros/package-lock.json
+    - run: cd tradebros
     - run: npm test
