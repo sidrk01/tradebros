@@ -13,7 +13,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
@@ -29,7 +28,11 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
         cache-dependency-path: tradebros/package-lock.json
-    - run:  |
+    - name: Install Jest
+    - run: |
         cd tradebros
         npm install jest
+    - name: Run Unit Tests
+    - run:  |
+        cd tradebros
         npm test
