@@ -31,4 +31,5 @@ jobs:
         cache-dependency-path: tradebros/package-lock.json
     - run:  |
         cd tradebros
+        npm install jest
         npm test
