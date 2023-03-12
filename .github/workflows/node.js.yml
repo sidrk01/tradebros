@@ -28,5 +28,5 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-        cache-dependecy-path: tradebros/package-lock.json
+        cache-dependency-path: tradebros/package-lock.json
     - run: npm test
