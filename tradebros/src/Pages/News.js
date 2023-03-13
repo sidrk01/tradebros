@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import Articles from "../components/Articles";
 import EarningSuprises from "../components/EarningSuprises";
 import StockCandles from "../components/StockCandles";
-import IPOCalender from "../components/IPOCalender";
 let temp = []
 
 
@@ -43,16 +42,17 @@ const KEY_URL = `&token=${key}`;
     return(
         <Fragment>
              <div className="containerNews">
-                <div id= "stock"> <h1> stocking</h1> </div>
                 <Fragment> 
                 <div id= "eps">  
                   <EarningSuprises> </EarningSuprises>
                 </div> 
+
+                 </Fragment>
+
                
                 </Fragment>
-                <div id= "ipo">
-                
-                </div>
+              
+
                 <Fragment>
                     <div id="articles">
                         <Articles> </Articles>
