@@ -3,6 +3,8 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import articles from "../components/articles.css" 
+
+
 export default function Articles() {
   const key = "bv1uf4v48v6o5ed6h88g";
   const BASE_URL = "https://finnhub.io/api/v1/news?category=general";
@@ -38,12 +40,12 @@ export default function Articles() {
         <ul>
           {stocksData.map((stock) => {
             return (
-              <ul className="aritcles-list">
+              <div className="aritcles-list">
                 
-                    <li className="category"> {stock.category} </li>
+                    <p className="category"> {stock.category} </p>
                     <li className="headline"> {stock.headline} </li>
                     <li className="paragraph"> {stock.summary} </li>
-              </ul>
+              </div>
             );
           })}
         </ul>

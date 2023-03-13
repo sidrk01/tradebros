@@ -29,20 +29,18 @@ useEffect(() => {
 
     return(
 <Fragment> 
-      <h1> Earning Suprise Data </h1>
+      <h1> Earning Report of TSLA </h1>
         <ul>
           {earningSupriseData.map((stock) => {
         return(
           <ul>
               <table>
                   <tr>
-                      <th>Symbol</th>
                       <th>Period</th>
                       <th>Actual</th>
-                      <th>Estiamte</th>
+                      <th>Estimate</th>
                   </tr>
                   <tr>
-                      <td>{stock.symbol}</td>
                       <td>{stock.period}</td>
                       <td>{stock.actual}</td>
                       <td>{stock.estimate}</td>                      
