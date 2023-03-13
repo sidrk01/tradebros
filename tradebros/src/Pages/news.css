@@ -16,5 +16,6 @@
 #eps{
     grid-area: eps;
     border-left: 5px white solid;
+    border-bottom: 5px white solid;
     border-top: 5px white solid;
 }

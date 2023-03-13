@@ -1,14 +1,8 @@
 
-  .pricing-container {
-    height: 900px;
-    background: linear-gradient(rgba(0,0,50,0.8), rgba(0,0,50,0.8)), url(login_background.png) no-repeat center center fixed;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-    justify-content: space-evenly;
-    align-items: center; 
-    display: flex;
-  }
+  .spacing{
+    margin-top: 100px;
+    margin-left: 355px;
+
   #pricing-table {
       margin: 100px auto;
       justify-content: center;
