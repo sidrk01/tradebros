@@ -37,14 +37,14 @@ export default function Articles() {
     <Fragment>
         <h1>Articles</h1>
         <div className="containerArticles">
-        <ul>
+        <ul className="aritcles-list">
           {stocksData.map((stock) => {
             return (
-              <div className="aritcles-list">
+              <div className="list">
                 
-                    <p className="category"> {stock.category} </p>
-                    <li className="headline"> {stock.headline} </li>
-                    <li className="paragraph"> {stock.summary} </li>
+                    <h4 className="category"> {stock.category} </h4>
+                    <h1 className="headline"> {stock.headline} </h1>
+                    <h2 className="paragraph"> {stock.summary} </h2>
               </div>
             );
           })}
