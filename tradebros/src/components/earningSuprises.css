@@ -1,0 +1,27 @@
+
+table, th, td {
+    border: 1px solid;
+}
+
+table {
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+tr {
+    table-layout: fixed;
+    width: 400px;
+
+}
+
+tr > td {
+    width: 500px;
+    text-align: center;
+}
+
+td {
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    word-break: break-word;
+
+}

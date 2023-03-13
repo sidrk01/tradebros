@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import axios from "axios";
 import { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
+import '../components/earningSuprises.css';
 export default function EarningSuprises(){
 
 
@@ -13,7 +14,6 @@ const[updatedEarningSupriseData, setUpdatedEarningSupriseData] = useState([]);
 
 useEffect(() => {
     axios.get(`${EARNING_URL}${KEY_URL}`).then(res=> {
-        console.log(res)
         setEarningSupriseData(res.data)
     })
     .catch(err=>{
@@ -28,25 +28,31 @@ useEffect(() => {
   });
 
     return(
-
+<Fragment> 
+      <h1> Earning Suprise Data </h1>
         <ul>
           {earningSupriseData.map((stock) => {
-            return (
-              <ul className="aritcles-list">
-                
-                    <li className="category"> 
-                    <h3> Actual</h3>
-                    {stock.actual} </li>
-                    <li className="headline"> 
-                    <h3> estimate</h3>{stock.estimate} </li>
-                    <li className="paragraph">
-                    <h3> period</h3> {stock.period} </li>
-                    <li className="suprise"> 
-                    <h3> suprise</h3>
-                    {stock.surprise}</li>
-              </ul>
-            );
-          })}
+        return(
+          <ul>
+              <table>
+                  <tr>
+                      <th>Symbol</th>
+                      <th>Period</th>
+                      <th>Actual</th>
+                      <th>Estiamte</th>
+                  </tr>
+                  <tr>
+                      <td>{stock.symbol}</td>
+                      <td>{stock.period}</td>
+                      <td>{stock.actual}</td>
+                      <td>{stock.estimate}</td>                      
+
+                  </tr>
+              </table>
+          </ul>
+      )
+  })}
         </ul>
+        </Fragment>
     );
 }
