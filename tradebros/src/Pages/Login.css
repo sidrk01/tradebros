@@ -50,7 +50,7 @@
     transform: translateX(-50%);
 }
 .form-box p{
-color: black;
+color: white;
 font-size: small;
 }
 
@@ -71,4 +71,8 @@ font-size: small;
 }
 .container button {
     background-color: #3c00a0; 
+}
+
+.container link {
+    color: blue;
 }

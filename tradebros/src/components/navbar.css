@@ -78,7 +78,7 @@ header {
 }
 
 .header-btn .sign-out:hover {
-  color: #C32865;
+  color: #3c00a0;
 }
 
 .header-btn .sign-up:hover {
@@ -86,7 +86,7 @@ header {
 }
 
 .header-btn .login  {
-  background: #C32865;
+  background: #3c00a0;
   border: 2px solid transparent;
   border-radius: 5px;
   transition: all .50s ease;

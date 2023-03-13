@@ -12,8 +12,10 @@ export default function SignOut() {
     //   
     // </div>
     return (
+      <div className='container'>
         <div className='center'>
           <div className='profile'>
+            <div className ='form-box'>
             <h1>Profile</h1>
             <p><strong>Email: </strong>{currentUser?.email}</p>
             <p>
@@ -22,6 +24,8 @@ export default function SignOut() {
             </p>
             <button class="button-89" role="button" onClick={() => signOut(auth)}>SignOut</button>
           </div>
+          </div>
+        </div>
         </div>
     )
 }

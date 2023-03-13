@@ -52,7 +52,6 @@ const KEY_URL = `&token=${key}`;
                 </Fragment>
                 <div id= "ipo">
                 
-               <IPOCalender> </IPOCalender>
                 </div>
                 <Fragment>
                     <div id="articles">
