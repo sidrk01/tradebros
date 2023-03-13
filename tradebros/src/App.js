@@ -17,6 +17,7 @@ import VerifyEmail from './VerifyEmail';
 import PrivateRoute from './Pages/PrivateRoute';
 import SignOut from './Pages/SignOut';
 import News from './Pages/News';
+import Features from './Pages/Features'
 
 function App() {
   const [timeActive, setTimeActive] = useState(false)
@@ -44,6 +45,7 @@ function App() {
           <Route path="/market" element={<Market/>}/>
           <Route path="/news" element={<News/>}/>
           <Route path="/pricing" exact/>
+          <Route path="/features" element={<Features/>}/>
 
           <Route path="/login" element={
             !currentUser?.emailVerified
