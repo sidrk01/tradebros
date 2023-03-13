@@ -47,11 +47,14 @@ export default function SignUp() {
   };
 
   return (
+    <div className="container">
     <div className="center">
       <div className="auth">
+        <div className="form-box">
         <h1>Register</h1>
         {error && <div className="auth__error">{error}</div>}
         <form onSubmit={register} name="registration_form">
+          <div className="input-field">
           <input autoCapitalize='none'
             type="email"
             value={email}
@@ -59,7 +62,8 @@ export default function SignUp() {
             required
             onChange={(e) => setEmail(e.target.value)}
           />
-
+          </div>
+          <div className = "input-field">
           <input
             type="password"
             value={password}
@@ -67,7 +71,8 @@ export default function SignUp() {
             placeholder="Enter your password"
             onChange={(e) => setPassword(e.target.value)}
           />
-
+          </div>
+          <div className="input-field">
           <input
             type="password"
             value={confirmPassword}
@@ -75,6 +80,7 @@ export default function SignUp() {
             placeholder="Confirm password"
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
+          </div>
 
           <button type="submit">Register</button>
         </form>
@@ -82,7 +88,9 @@ export default function SignUp() {
           Already have an account?
           <Link to="/login" className='login-link'>login</Link>
         </span>
+        </div>
       </div>
+    </div>
     </div>
   );
 }
