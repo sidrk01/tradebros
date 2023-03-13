@@ -60,9 +60,9 @@ export default function Login() {
   
             <button type='submit'>Login</button>
           </form>
-          <p>
+          <p className = 'link'>
             Don't have an account? 
-            <Link to='/register'>Create one here</Link>
+            <Link to='/sign-up'>Create one here</Link>
           </p>
           </div>
         </div>

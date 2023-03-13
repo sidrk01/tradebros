@@ -104,9 +104,9 @@ body {
 
 
 .search-btn {
-    width: 60px;
+    width: 80px;
     height: 60px;
-    border-radius: 50%;
+    border-radius: 20%;
     justify-content: center;
     background-color: #C32865;
     align-items: center;
