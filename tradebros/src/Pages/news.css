@@ -1,11 +1,13 @@
+
 .containerNews{
     display: grid;
-    height: 184vh;
+    height: 100vh;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr;
+    grid-template-rows: 0fr 1.5fr 1.5fr 6fr;
     grid-template-areas:
     "stock stock stock stock"
     "articles articles articles eps"
+    "articles articles articles ipo"
     "articles articles articles ipo"
 }
 

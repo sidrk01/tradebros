@@ -16,6 +16,7 @@ import { auth } from './Firebase';
 import VerifyEmail from './VerifyEmail';
 import PrivateRoute from './Pages/PrivateRoute';
 import SignOut from './Pages/SignOut';
+import News from './Pages/News';
 
 function App() {
   const [timeActive, setTimeActive] = useState(false)
@@ -41,6 +42,7 @@ function App() {
           <Route path="/support" element={<Support/>}/>
           <Route path="/stock_performance" element={<StockPerformance/>}/>
           <Route path="/market" element={<Market/>}/>
+          <Route path="/news" element={<News/>}/>
           <Route path="/pricing" exact/>
 
           <Route path="/login" element={

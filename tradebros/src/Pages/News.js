@@ -3,8 +3,10 @@ import axios from "axios";
 import './news.css';
 import { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
-import EarningCalender from "../components/EarningCalender";
 import Articles from "../components/Articles";
+import EarningSuprises from "../components/EarningSuprises";
+import StockCandles from "../components/StockCandles";
+import IPOCalender from "../components/IPOCalender";
 let temp = []
 
 
@@ -44,11 +46,14 @@ const KEY_URL = `&token=${key}`;
                 <div id= "stock"> <h1> stocking</h1> </div>
                 <Fragment> 
                 <div id= "eps">  
-                   <EarningCalender> </EarningCalender>
+                  <EarningSuprises> </EarningSuprises>
                 </div> 
                
                 </Fragment>
-                <div id= "ipo">  <h1> ipo</h1></div>
+                <div id= "ipo">
+                
+               <IPOCalender> </IPOCalender>
+                </div>
                 <Fragment>
                     <div id="articles">
                         <Articles> </Articles>

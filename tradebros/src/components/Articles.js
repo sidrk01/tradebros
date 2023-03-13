@@ -16,9 +16,10 @@ export default function Articles() {
       .get(`${BASE_URL}$${KEY_URL}`)
       .then((res) => {
         setStocksData(res.data);
+        // console.log(res)
       })
       .catch((err) => {
-        console.log(err);
+        // console.log(err);
       });
   }, []);
 
@@ -27,6 +28,7 @@ export default function Articles() {
       stocksData.splice(0, 90);
     }
     setUpdatedStockData(stocksData);
+
   });
 
   return (
