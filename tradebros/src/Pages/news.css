@@ -4,33 +4,18 @@
     display: grid;
     height: 100vh;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 3fr 1fr 1.15fr;
     grid-template-areas:
-    "articles  articles articles "
-    "eps eps eps "
-}
-
-ul {
-    color: white;
-}
-li {
-    color: white;
-}
-p{
-    color: white;
+    "articles  articles eps "
+    "articles articles eps "
 }
 
 #articles {
-    border: 5px white solid;
     grid-area: articles;
 }
 #eps{
-    border: 5px white solid;
     grid-area: eps;
+    border-left: 5px white solid;
+    border-top: 5px white solid;
+    border-bottom: 5px white solid;
 }
-#stockCandles{
-    border: 5px white solid;
-    grid-area: stockCandles;
-}
-
-
