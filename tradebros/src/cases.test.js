@@ -1,7 +1,15 @@
 import renderer from 'react-test-renderer';
 import Learn from './Pages/Learn.js';
+import Features from './Pages/Features.js';
 
-it('renders correctly', () => {
+it('Features renders correctly', () => {
+  const tree = renderer
+    .create(<Features/>)
+    .toJSON();
+  expect(tree).toMatchSnapshot();
+});
+
+it('Learn renders correctly', () => {
   const tree = renderer
     .create(<Learn/>)
     .toJSON();
