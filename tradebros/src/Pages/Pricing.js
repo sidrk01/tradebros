@@ -5,10 +5,12 @@ import PricingTable from "../components/PricingTable"
 
 export default function Pricing(){
     return (
+        <div className = "pricing-container">
         <Fragment>
          <PricingTable>
 
          </PricingTable>
     </Fragment>
+    </div>
     );
 }
