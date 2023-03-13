@@ -14,6 +14,10 @@ tr {
 
 }
 
+th{
+    color: white;
+}
+
 tr > td {
     width: 500px;
     text-align: center;
@@ -23,5 +27,6 @@ td {
     border: 1px solid #ccc;
     padding: 5px 10px;
     word-break: break-word;
+    color: white;
 
 }
