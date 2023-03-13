@@ -28,6 +28,7 @@ export default function Market() {
     stocksList.forEach((stock) => {
       promises.push(
         getStocksData(stock).then((res) => {
+          tempStocksData.splice(6);
           tempStocksData.push({
             name: stock,
             ...res.data,
@@ -41,8 +42,6 @@ export default function Market() {
       console.log(tempStocksData);
     });
   }, []);
-
-  //   console.log(stocksData[0].name)
 
   return (
     <Fragment>
