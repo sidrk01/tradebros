@@ -46,7 +46,13 @@ const KEY_URL = `&token=${key}`;
                 <div id= "eps">  
                   <EarningSuprises> </EarningSuprises>
                 </div> 
+
                  </Fragment>
+
+               
+                </Fragment>
+              
+
                 <Fragment>
                     <div id="articles">
                         <Articles> </Articles>

@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
-// import "./Login.css";
+import "./Login.css";
 import { useNavigate, Link } from "react-router-dom";
 import { sendEmailVerification, signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../Firebase";
-import "./signUp.css"
+import "./signUp.css";
 
 
 
@@ -34,32 +34,39 @@ export default function Login() {
     }
 
     return (
+        <div className = 'container'>
         <div className='center'>
         <div className='auth'>
-          <h1>Log in</h1>
+          <div className='form-box'>
+          <h1>Login</h1>
           {error && <div className='auth__error'>{error}</div>}
           <form onSubmit={login} name='login_form'>
+            <div className='input-field'>
             <input 
               type='email' 
               value={email}
               required
               placeholder="Enter your email"
               onChange={e => setEmail(e.target.value)}/>
-  
+            </div>
+            <div className='input-field'>
             <input 
               type='password'
               value={password}
               required
               placeholder='Enter your password'
               onChange={e => setPassword(e.target.value)}/>
+              </div>
   
             <button type='submit'>Login</button>
           </form>
-          <p>
-            Don't have and account? 
-            <Link to='/register'>Create one here</Link>
+          <p className = 'link'>
+            Don't have an account? 
+            <Link to='/sign-up'>Create one here</Link>
           </p>
+          </div>
         </div>
       </div>
+    </div>
     )
 }
