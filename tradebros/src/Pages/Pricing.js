@@ -4,6 +4,7 @@ import PricingTable from "../components/PricingTable"
 
 export default function Pricing(){
     return (
+        <div className = "pricing-container">
         <Fragment>
     <div className="spacing"> 
     <p> ...</p>
@@ -12,5 +13,6 @@ export default function Pricing(){
          </PricingTable>
          </div>
     </Fragment>
+    </div>
     );
 }

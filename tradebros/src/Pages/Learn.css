@@ -144,4 +144,7 @@ h1{
         max-width: calc(50%-20px);
     }
 }
+text {
+    font-size: 40px;
+}
 
