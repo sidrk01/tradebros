@@ -1,0 +1,75 @@
+
+.containerNews{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0fr 1.5fr 1.5fr 6fr;
+    grid-template-areas:
+    "stock stock stock stock"
+    "articles articles articles eps"
+    "articles articles articles ipo"
+    "articles articles articles ipo"
+}
+
+ul {
+    color: white;
+}
+li {
+    color: white;
+}
+p{
+    color: white;
+}
+
+#stock {
+    border: 5px white solid;
+    grid-area: stock;
+}
+#articles {
+    border: 5px white solid;
+    grid-area: articles;
+}
+#eps{
+    border: 5px white solid;
+    grid-area: eps;
+}
+#rt{
+    border: 5px white solid;
+
+    grid-area: rt;
+}
+#ipo{
+    border: 5px white solid;
+
+    grid-area: ipo;
+}
+
+
+a {
+    color: white;
+}
+
+table, th, td {
+    border: 1px solid;
+}
+
+table {
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+tr {
+    table-layout: fixed;
+    width: 400px;
+}
+
+tr > td {
+    width: 500px;
+    text-align: center;
+}
+
+td {
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    word-break: break-word;
+}
