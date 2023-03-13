@@ -1,7 +1,21 @@
 import renderer from 'react-test-renderer';
 import Learn from './Pages/Learn.js';
+import Features from './Pages/Features.js';
+import Market from './Pages/Market.js';
+it('Market renders correctly', () => {
+  const tree = renderer
+    .create(<Market/>)
+    .toJSON();
+  expect(tree).toMatchSnapshot();
+});
+it('Features renders correctly', () => {
+  const tree = renderer
+    .create(<Features/>)
+    .toJSON();
+  expect(tree).toMatchSnapshot();
+});
 
-it('renders correctly', () => {
+it('Learn renders correctly', () => {
   const tree = renderer
     .create(<Learn/>)
     .toJSON();
