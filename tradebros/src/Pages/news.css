@@ -1,10 +1,10 @@
 
 .containerNews{
-    margin-top: 100px;
+    margin-top: 112px;
     display: grid;
-    height: 100vh;
+    height: 100%;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 3fr 1fr 1.15fr;
+    grid-template-rows: 3fr 1fr 1fr;
     grid-template-areas:
     "articles  articles eps "
     "articles articles eps "
@@ -17,5 +17,4 @@
     grid-area: eps;
     border-left: 5px white solid;
     border-top: 5px white solid;
-    border-bottom: 5px white solid;
 }

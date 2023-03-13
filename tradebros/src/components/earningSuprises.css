@@ -16,6 +16,7 @@ tr {
 
 th{
     color: white;
+    background-color: green;
 }
 
 tr > td {
@@ -28,5 +29,9 @@ td {
     padding: 5px 10px;
     word-break: break-word;
     color: white;
+    background-color: green;
 
+}
+.EPSHeading{
+    color: white;
 }
