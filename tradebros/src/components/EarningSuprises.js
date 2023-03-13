@@ -10,10 +10,14 @@ const key = "bv1uf4v48v6o5ed6h88g";
 const TSLA_URL = "https://finnhub.io/api/v1/stock/earnings?symbol=TSLA";
 const AAPL_URL = "https://finnhub.io/api/v1/stock/earnings?symbol=TSLA";
 const MSFT_URL = "https://finnhub.io/api/v1/stock/earnings?symbol=TSLA";
+const NFLX_URL = "https://finnhub.io/api/v1/stock/earnings?symbol=NFLX";
+const AMZN_URL = "https://finnhub.io/api/v1/stock/earnings?symbol=AMZN";
 
 const KEY_URL = `&token=${key}`;
 const[earningTSLASupriseData, setTSLAEarningSupriseData] = useState([]);
 const[earningAAPLSupriseData, setAAPLEarningSupriseData] = useState([]);
+const[earningNFLXSupriseData, setNFLXEarningSupriseData] = useState([]);
+const[earningAMZNSupriseData, setAMZNEarningSupriseData] = useState([]);
 const[earningMSFTSupriseData, setMSFTEarningSupriseData] = useState([]);
 
 useEffect(() => {
@@ -40,6 +44,23 @@ useEffect(() => {
         console.log(err)
     })
 }, [])
+useEffect(() => {
+  axios.get(`${NFLX_URL}${KEY_URL}`).then(res=> {
+    setNFLXEarningSupriseData(res.data)
+  })
+  .catch(err=>{
+      console.log(err)
+  })
+}, [])
+useEffect(() => {
+  axios.get(`${AMZN_URL}${KEY_URL}`).then(res=> {
+    setAMZNEarningSupriseData(res.data)
+  })
+  .catch(err=>{
+      console.log(err)
+  })
+}, [])
+
 
 
     return(
@@ -122,7 +143,61 @@ useEffect(() => {
           </ul>
       )
   })}
+  <h2 className="EPSHeading"> MSFT Earning Report</h2>
         </ul>
+        <ul>
+          {earningMSFTSupriseData.map((stock) => {
+        return(
+          <ul>
+              <table>
+                <thead>
+                <tr>
+                      <th>Period</th>
+                      <th>Actual</th>
+                      <th>Estimate</th>
+                  </tr>
+                </thead>
+                <tbody> 
+                  <tr>
+                      <td>{stock.period}</td>
+                      <td>{stock.actual}</td>
+                      <td>{stock.estimate}</td>                      
+
+                  </tr>
+                </tbody>
+              </table>
+          </ul>
+      )
+  })}
+  <h2 className="EPSHeading"> MSFT Earning Report</h2>
+        </ul>
+        <ul>
+          {earningMSFTSupriseData.map((stock) => {
+        return(
+          <ul>
+              <table>
+                <thead>
+                <tr>
+                      <th>Period</th>
+                      <th>Actual</th>
+                      <th>Estimate</th>
+                  </tr>
+                </thead>
+                <tbody> 
+                  <tr>
+                      <td>{stock.period}</td>
+                      <td>{stock.actual}</td>
+                      <td>{stock.estimate}</td>                      
+
+                  </tr>
+                </tbody>
+              </table>
+          </ul>
+      )
+  })}
+  
+        </ul>
+        
         </Fragment>
     );
 }

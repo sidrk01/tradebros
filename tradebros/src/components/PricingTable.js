@@ -9,7 +9,7 @@ export default function Pricing(){
 <ul>
 <li>Price Alerts</li>
 <li>Risk Assessment</li>
-<li>Suggested Entry and Exit Signals</li>
+<li>Stock Recommendation</li>
 </ul> 
 </div>
 <div class="plan" id="most-popular">
@@ -17,8 +17,8 @@ export default function Pricing(){
 <a class="signup" href='/sign-up'>Sign up</a>        
 <ul>
 <li>Free Courses</li>
-<li>Free Market Anaylsis</li>
-<li></li>
+<li>Free Sector Anaylsis</li>
+<li>24/7 Support </li>
 </ul>    
 </div>
 <div class="plan">

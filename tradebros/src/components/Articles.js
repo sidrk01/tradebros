@@ -34,22 +34,34 @@ export default function Articles() {
   });
 
   return (
+  
     <Fragment>
-        <h1>Articles</h1>
-        <div className="containerArticles">
-        <ul className="aritcles-list">
-          {stocksData.map((stock) => {
-            return (
-              <li className="listofArticles">
-                
-                    <h4 className="category"> {stock.category} </h4>
-                    <h1 className="headline"> {stock.headline} </h1>
-                    <h2 className="paragraph"> {stock.summary} </h2>
-            </li>
-            );
-          })}
-        </ul>
-      </div>
-    </Fragment>
+    <div id="articles">
+            <ul>
+                {stocksData.map((stock) => {
+                    return(
+                        <ul>
+                            <table>
+                                <tr>
+                                    <th className="ArticlesHeader">Category</th>
+                                    <th className="ArticlesHeader">Headline</th>
+                                    <th className="ArticlesHeader">Summary</th>
+                                    <th className="ArticlesHeader">URL</th>
+                                </tr>
+                                <tr>
+                                    <td className="ArticleData">{stock.category}</td>
+                                    <td className="ArticleData">{stock.headline}</td>
+                                    <td className="ArticleData">{stock.summary}</td>
+                                    <td className="ArticleData"><a className="urls" href={stock.url}>{stock.url}</a></td>
+                                    
+
+                                </tr>
+                            </table>
+                        </ul>
+                    )
+                })}
+            </ul>
+    </div>
+</Fragment>
   );
 }

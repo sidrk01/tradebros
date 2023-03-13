@@ -1,5 +1,8 @@
 
-  
+  .spacing{
+    margin-top: 100px;
+    margin-left: 355px;
+  }
   #pricing-table {
       margin: 100px auto;
       justify-content: center;
