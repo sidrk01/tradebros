@@ -18,6 +18,7 @@ import PrivateRoute from './Pages/PrivateRoute';
 import SignOut from './Pages/SignOut';
 import News from './Pages/News';
 import Features from './Pages/Features'
+import Pricing from './Pages/Pricing';
 
 function App() {
   const [timeActive, setTimeActive] = useState(false)
@@ -44,7 +45,7 @@ function App() {
           <Route path="/stock_performance" element={<StockPerformance/>}/>
           <Route path="/market" element={<Market/>}/>
           <Route path="/news" element={<News/>}/>
-          <Route path="/pricing" exact/>
+          <Route path="/pricing" element={<Pricing/>}/>
           <Route path="/features" element={<Features/>}/>
 
           <Route path="/login" element={

@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import articles from "../components/articles.css" 
+import "../components/articles.css" 
 
 
 export default function Articles() {
@@ -40,12 +40,12 @@ export default function Articles() {
         <ul className="aritcles-list">
           {stocksData.map((stock) => {
             return (
-              <div className="list">
+              <li className="listofArticles">
                 
                     <h4 className="category"> {stock.category} </h4>
                     <h1 className="headline"> {stock.headline} </h1>
                     <h2 className="paragraph"> {stock.summary} </h2>
-              </div>
+            </li>
             );
           })}
         </ul>
