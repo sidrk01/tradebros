@@ -3,7 +3,7 @@
 Authors: [Muzammil Allie](https://github.com/mallie2000)
          [Shaheen Islam](https://github.com/skiislam)
          [Blake Dickerson](https://github.com/blake2703)
-         [Sidharth Ramkummar](https://github.com/sidrk01)
+         [Sidharth Ramkumar](https://github.com/sidrk01)
          [Vinh Vu](https://github.com/VinhuxOS)
            
 ## Project Description
